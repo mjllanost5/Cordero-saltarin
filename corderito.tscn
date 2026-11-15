@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dqt0ygr11kir6"]
+
+[ext_resource type="Texture2D" uid="uid://w4gtah2rio8h" path="res://Assets/corderito.png" id="1_6fn67"]
+[ext_resource type="Script" uid="uid://djodqf55g3qy" path="res://corderito.gd" id="1_e2e8q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_icskg"]
+size = Vector2(18, 20)
+
+[node name="Corderito" type="CharacterBody2D" unique_id=891791106 groups=["jugador"]]
+position = Vector2(240, 50)
+scale = Vector2(2, 2)
+script = ExtResource("1_e2e8q")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=592080650]
+texture = ExtResource("1_6fn67")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1394588853]
+visible = false
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_icskg")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=78329920]
+offset = Vector2(0, -50)
+limit_left = 0
+limit_right = 480
+limit_bottom = 270
+position_smoothing_enabled = true

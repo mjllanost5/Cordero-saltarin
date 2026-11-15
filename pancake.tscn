@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://dh01f2ryrugrw"]
+
+[ext_resource type="Script" uid="uid://dafj8etjedip4" path="res://pancake.gd" id="1_0ssyo"]
+[ext_resource type="Texture2D" uid="uid://gh2tv8avglfe" path="res://Assets/pancake2.png" id="2_6lwxe"]
+[ext_resource type="Texture2D" uid="uid://b6ytqgov6536b" path="res://Assets/pancake2 (1).png" id="3_ff277"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_icskg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_6lwxe")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ff277")
+}],
+"loop": 0,
+"name": &"squash",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0kivm"]
+size = Vector2(50, 42)
+
+[node name="Pancake" type="Area2D" unique_id=708791153]
+position = Vector2(240, 140)
+script = ExtResource("1_0ssyo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1918532412]
+sprite_frames = SubResource("SpriteFrames_icskg")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2128624184]
+visible = false
+position = Vector2(-2, -5)
+shape = SubResource("RectangleShape2D_0kivm")

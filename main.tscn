@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://cqow47bch5ocs"]
+
+[ext_resource type="PackedScene" uid="uid://dqt0ygr11kir6" path="res://corderito.tscn" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://crtdv5djku0ij" path="res://main.gd" id="1_lquwl"]
+[ext_resource type="PackedScene" uid="uid://dh01f2ryrugrw" path="res://pancake.tscn" id="2_h2yge"]
+[ext_resource type="Texture2D" uid="uid://cdk4w6qgc21ji" path="res://Assets/fondo.png" id="3_h2yge"]
+[ext_resource type="AudioStream" uid="uid://dcfjlxaqb5ekm" path="res://Assets/cancion 1.mp3" id="4_1bvp3"]
+
+[node name="main" type="Node2D" unique_id=2018538304]
+script = ExtResource("1_lquwl")
+
+[node name="Corderito" parent="." unique_id=891791106 instance=ExtResource("1_0xm2m")]
+position = Vector2(240, 150)
+
+[node name="Pancake" parent="." unique_id=708791153 instance=ExtResource("2_h2yge")]
+position = Vector2(240, 205)
+
+[node name="Pancake2" parent="." unique_id=105902654 instance=ExtResource("2_h2yge")]
+position = Vector2(151, 129)
+
+[node name="Pancake3" parent="." unique_id=1198998209 instance=ExtResource("2_h2yge")]
+position = Vector2(324, 72)
+
+[node name="Pancake4" parent="." unique_id=2113138367 instance=ExtResource("2_h2yge")]
+position = Vector2(166, -14)
+
+[node name="Pancake5" parent="." unique_id=374846384 instance=ExtResource("2_h2yge")]
+position = Vector2(325, -102)
+
+[node name="Pancake6" parent="." unique_id=424007627 instance=ExtResource("2_h2yge")]
+position = Vector2(169, -180)
+move_distance = Vector2(100, 0)
+
+[node name="Pancake10" parent="." unique_id=32195081 instance=ExtResource("2_h2yge")]
+position = Vector2(173, -523)
+move_distance = Vector2(100, 0)
+
+[node name="Pancake13" parent="." unique_id=104018249 instance=ExtResource("2_h2yge")]
+position = Vector2(200, -812)
+move_distance = Vector2(100, 0)
+
+[node name="Pancake14" parent="." unique_id=615517622 instance=ExtResource("2_h2yge")]
+position = Vector2(371, -886)
+bounce_force = -600.0
+move_distance = Vector2(-100, 0)
+
+[node name="Pancake7" parent="." unique_id=1068971896 instance=ExtResource("2_h2yge")]
+position = Vector2(324, -275)
+
+[node name="Pancake8" parent="." unique_id=1835199959 instance=ExtResource("2_h2yge")]
+position = Vector2(203, -360)
+
+[node name="Pancake9" parent="." unique_id=486075736 instance=ExtResource("2_h2yge")]
+position = Vector2(312, -440)
+
+[node name="Pancake11" parent="." unique_id=1560320961 instance=ExtResource("2_h2yge")]
+position = Vector2(359, -622)
+
+[node name="Pancake12" parent="." unique_id=571867360 instance=ExtResource("2_h2yge")]
+position = Vector2(254, -712)
+
+[node name="Pancake15" parent="." unique_id=1785157291 instance=ExtResource("2_h2yge")]
+position = Vector2(277, -1007)
+
+[node name="Fondo" type="Sprite2D" parent="." unique_id=426417934]
+z_index = -10
+position = Vector2(-1, -1435)
+scale = Vector2(6, 6)
+texture = ExtResource("3_h2yge")
+centered = false
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1492964042]
+stream = ExtResource("4_1bvp3")
+volume_db = -10.0
+autoplay = true
